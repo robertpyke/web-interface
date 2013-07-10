@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BCCVL layout</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/general.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+		<script src="lib/html5shiv/html5shiv.js"></script>
+	<![endif]-->
+	<style type="text/css">
+	</style>
+</head>
+
+<body>
+
+
+<!-- navbar ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<nav class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container-fluid">
+
+		<!-- button for narroew screen menu -->
+		<button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">menu</button>
+
+		<!-- project title -->
+		<a class="brand" href="#"><img src="/images/bcc_logo_tiny.png">BCC Virtual Lab</a>
+
+		<!-- container for content that will hide under menu when screen is narrow -->
+		<div class="nav-collapse collapse">
+
+			<!-- user menu -->
+			<div class="btn-group pull-right">
+				<a class="btn btn dropdown-toggle" data-toggle="dropdown" href="#">
+					<i class="icon-user"></i>Usey M<sup>c</sup>User <i class="caret"></i>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#"><i class="icon-info-sign"></i> My details</a></li>
+					<li><a href="#"><i class="icon-eye-open"></i> Admin access</a></li>
+					<li class="divider"></li>
+					<li><a href="#"><i class="icon-eject"></i> Log out</a></li>
+				</ul>
+			</div>
+
+			<!-- search field -->
+			<form class="navbar-search pull-right">
+				<input type="text" class="search-query" placeholder="Search">
+			</form>
+
+			<!-- main menu items -->
+			<ul class="nav">
+				<li><a href="#">Dashboard</a></li>
+				<li><a href="#">Data</a></li>
+				<li class="active"><a href="#">Experiments</a></li>
+				<li><a href="#">Published Outputs</a></li>
+			</ul>
+
+		</div><!--/.nav-collapse -->
+
+	</div></div></nav><!-- end of nav wrapper -->
+
+
+<!-- content ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- container for main content -->
+	<div class="container-fluid bccvl-main">
+
+
+<!-- breadcrumb trail ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<div class="bccvl-breadcrumb row-fluid">
+			<div class="span12">
+				<ul class="breadcrumb">
+					<li><a href="#" class="icon-home"></a></li>
+					<li class="separator icon-chevron-right"> </li>
+					<li><a href="#"><i class=""></i> Experiments</a></li>
+					<li class="separator icon-chevron-right"> </li>
+					<li><a href="#"><i class=""></i> New Species Distribution Model</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+<!-- experiment header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- hmm actually not sure if we really need the tabs -->
+
+
+<!-- experiment setup form ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<section class="bccvl-experimentdetails tabbable">
+		<form>
+
+			<!-- tabs -->
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#tab-occur" data-toggle="tab">Occurrences</a></li>
+				<li><a href="#tab-enviro" data-toggle="tab">Environment</a></li>
+				<li><a href="#tab-climate" data-toggle="tab">Climate</a></li>
+				<li><a href="#tab-config" data-toggle="tab">Configuration</a></li>
+				<li><a href="#tab-results" data-toggle="tab">Status</a></li>
+			</ul>
+
+			<div class="tab-content">
+
+				<!-- page: species occurrences ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ -->
+				<div class="tab-pane active" id="tab-occur">
+					<div class="row-fluid">
+
+						<!-- list of available data -->
+						<div class="span4">
+							<table class="table table-hover">
+								<thead>
+									<tr><th colspan="3">
+										Species Occurrence Datasets
+									</th></tr>
+									<tr><td class="bccvl-searchform" colspan="3">
+										<form class="form-inline xxxform-search">
+											<input name="speciesOccurrenceQuery" type="text" class="span8 xxxsearch-query" placeholder="find more species..">
+											<select class="span4">
+												<option>at ALA</option>
+												<option>count 'em yerself</option>
+											</select>
+										</form>
+									</td></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="bccvl-table-choose">
+											<input type="radio" name="occur" id="koalaID" value="koalaID">
+										</td>
+										<td class="bccvl-table-label"><label for="koalaID">
+											<h1>Species name (e.g. Koala)</h1>
+											<p>provenance (e.g. provided by BCCVL)</p>
+										</label></td>
+										<td class="bccvl-table-controls">
+											<a href="#"><i class="icon-eye-open" title="preview this dataset"></i></a>
+											<a href="#"><i class="icon-cog" title="uh, dunno"></i></a>
+										</td>
+									</tr>
+									<tr>
+										<td class="bccvl-table-choose">
+											<input type="radio" name="occur" id="toadID" value="toadID">
+										</td>
+										<td class="bccvl-table-label"><label for="toadID">
+											<h1>Cane Toad <i class="taxonomy">Rhinella marina</i></h1>
+											<p>imported from ALA, 8 July 2013</p>
+										</label></td>
+										<td class="bccvl-table-controls">
+											<a href="#"><i class="icon-eye-open" title="preview this dataset"></i></a>
+											<a href="#"><i class="icon-cog" title="uh, dunno"></i></a>
+										</td>
+									</tr>
+									<tr>
+										<td class="bccvl-table-choose">
+											<input type="radio" name="occur" id="shmoadID" value="shmoadID">
+										</td>
+										<td class="bccvl-table-label"><label for="shmoadID">
+											<h1>Shmane Toad <i class="taxonomy">Rhinella shmarina</i></h1>
+											<p>imported from ALA, 9 July 2013</p>
+										</label></td>
+										<td class="bccvl-table-controls">
+											<a href="#"><i class="icon-eye-open" title="preview this dataset"></i></a>
+											<a href="#"><i class="icon-cog" title="uh, dunno"></i></a>
+										</td>
+									</tr>
+									<tr>
+										<td class="bccvl-table-choose">
+											<input type="radio" name="occur" id="dogID" value="dogID">
+										</td>
+										<td class="bccvl-table-label"><label for="dogID">
+											<h1>Dog</h1>
+											<p>imported from ALA, 10 July 2013</p>
+										</label></td>
+										<td class="bccvl-table-controls">
+											<a href="#"><i class="icon-eye-open" title="preview this dataset"></i></a>
+											<a href="#"><i class="icon-cog" title="uh, dunno"></i></a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- preview area -->
+						<div class="span8 well">
+							<div class="bccvl-preview-pane">
+								<p class="empty">preview</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- page: environmental layers  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ -->
+				<div class="tab-pane" id="tab-enviro">
+					<div class="row-fluid">
+
+						<!-- list of available data -->
+						<div class="span4">
+							<table class="table table-hover">
+								<thead>
+									<tr><th colspan="3">
+										Environmental Datasets
+									</th></tr>
+									<tr><td class="bccvl-searchform" colspan="3">
+										<form class="form-inline xxxform-search">
+											<input name="envQuery" type="text" class="span8 xxxsearch-query" placeholder="find more environmental data..">
+											<select class="span4">
+												<option>at TERN</option>
+											</select>
+										</form>
+									</td></tr>
+									<tr><td colspan="3">
+										<p><i>Coming: selectors for resolution, coverage etc</i></p>
+									</td></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td colspan="3" class="bccvl-table-empty">
+											<p>nothing to show</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- preview area -->
+						<div class="span8 well">
+							<div class="bccvl-preview-pane">
+								<p class="empty">preview</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- page: climate layers ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ -->
+				<div class="tab-pane" id="tab-climate">
+					<div class="row-fluid">
+
+						<!-- list of available data -->
+						<div class="span4">
+							<table class="table table-hover">
+								<thead>
+									<tr><th colspan="3">
+										Climate Datasets
+									</th></tr>
+									<tr><td class="bccvl-searchform" colspan="3">
+										<form class="form-inline xxxform-search">
+											<input name="envQuery" type="text" class="span8 xxxsearch-query" placeholder="find more climate data..">
+											<select class="span4">
+												<option>from WorldClim</option>
+											</select>
+										</form>
+									</td></tr>
+									<tr><td colspan="3">
+										<p><i>Coming: selectors for resolution, coverage etc</i></p>
+									</td></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="bccvl-table-choose"><input type="checkbox" name="climate" id="bioclim1" value="bioclim1"></td>
+										<td class="bccvl-table-label"><label for="bioclim1">
+											<h1>annual mean temperature <small>0.5&deg; (5km) resolution</small></h1><p>bioclim1 from WorldClim.org</p>
+										</label></td>
+										<td class="bccvl-table-controls">
+											<a href="#"><i class="icon-eye-open" title="preview this dataset"></i></a>
+											<a href="#"><i class="icon-cog" title="uh, dunno"></i></a>
+										</td>
+									</tr>
+									<tr>
+										<td class="bccvl-table-choose"><input type="checkbox" name="climate" id="bioclim2" value="bioclim2"></td>
+										<td class="bccvl-table-label"><label for="bioclim2">
+											<h1>mean diurnal range <small>0.5&deg; (5km) resolution</small></h1><p>bioclim2 from WorldClim.org</p>
+										</label></td>
+										<td class="bccvl-table-controls">
+											<a href="#"><i class="icon-eye-open" title="preview this dataset"></i></a>
+											<a href="#"><i class="icon-cog" title="uh, dunno"></i></a>
+										</td>
+									</tr>
+									<tr>
+										<td class="bccvl-table-choose"><input type="checkbox" name="climate" id="bioclim3" value="bioclim3"></td>
+										<td class="bccvl-table-label"><label for="bioclim3">
+											<h1>bioclim3 <small>0.5&deg; (5km) resolution</small></h1><p>bioclim3 from WorldClim.org</p>
+										</label></td>
+										<td class="bccvl-table-controls">
+											<a href="#"><i class="icon-eye-open" title="preview this dataset"></i></a>
+											<a href="#"><i class="icon-cog" title="uh, dunno"></i></a>
+										</td>
+									</tr>
+									<tr>
+										<td class="bccvl-table-choose"><input type="checkbox" name="climate" id="bioclim4" value="bioclim4"></td>
+										<td class="bccvl-table-label"><label for="bioclim4">
+											<h1>bioclim4 <small>0.5&deg; (5km) resolution</small></h1><p>bioclim4 from WorldClim.org</p>
+										</label></td>
+										<td class="bccvl-table-controls">
+											<a href="#"><i class="icon-eye-open" title="preview this dataset"></i></a>
+											<a href="#"><i class="icon-cog" title="uh, dunno"></i></a>
+										</td>
+									</tr>
+									<tr>
+										<td class="bccvl-table-choose"><input type="checkbox" name="climate" id="bioclim5" value="bioclim5"></td>
+										<td class="bccvl-table-label"><label for="bioclim5">
+											<h1>bioclim5 <small>0.5&deg; (5km) resolution</small></h1><p>bioclim5 from WorldClim.org</p>
+										</label></td>
+										<td class="bccvl-table-controls">
+											<a href="#"><i class="icon-eye-open" title="preview this dataset"></i></a>
+											<a href="#"><i class="icon-cog" title="uh, dunno"></i></a>
+										</td>
+									</tr>
+									<tr>
+										<td class="bccvl-table-choose"><input type="checkbox" name="climate" id="bioclim6" value="bioclim6"></td>
+										<td class="bccvl-table-label"><label for="bioclim6">
+											<h1>bioclim6 <small>0.5&deg; (5km) resolution</small></h1><p>bioclim6 from WorldClim.org</p>
+										</label></td>
+										<td class="bccvl-table-controls">
+											<a href="#"><i class="icon-eye-open" title="preview this dataset"></i></a>
+											<a href="#"><i class="icon-cog" title="uh, dunno"></i></a>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+						<!-- preview area -->
+						<div class="span8 well">
+							<div class="bccvl-preview-pane">
+								<p class="empty">preview</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- page: config  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ -->
+				<div class="tab-pane" id="tab-config">
+					<div class="row-fluid">
+
+						<!-- experiment title, algo -->
+						<div class="span8">
+							<input type="text" name="expName" class="bccvl-expname input-block-level" placeholder="Experiment Name">
+						</div>
+						<div class="span4">
+							<select class="input-block-level">
+								<option>bioclim</option>
+							</select>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- page: status  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ -->
+				<div class="tab-pane" id="tab-results">
+					<p>status / results </p>
+				</div>
+
+			</div>
+
+		</form>
+		</section>
+
+	</div><!-- end of main content container -->
+
+<!-- footer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<footer>
+		<div class="container-fluid">
+			<small>&hearts; and &copy; 2013 &nbsp;&middot;&nbsp; the BCCVL team</small>
+		</div>
+	</footer>
+
+<!-- javascript ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<script src="/lib/jquery/jquery-2.0.3.js"></script>
+	<script src="/lib/bootstrap/js/bootstrap.js"></script>
+	<script>
+		$( function(){ /* stuff here */ } )
+	</script>
+
+</body>
+</html>
