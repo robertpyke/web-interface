@@ -142,9 +142,9 @@ td.bccvl-table-controls {
     text-align: right;
 }
 td.bccvl-table-controls a {
+    float: right;
     border-radius: 1px;
     padding: 3px 6px;
-    margin: 3px;
 }
 td.bccvl-table-controls a:hover {
     box-shadow: 0 0 1px 1px #ccc;
