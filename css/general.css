@@ -56,7 +56,6 @@ body {
 /* preview window -------------------------------------------------------- */
 
 .bccvl-preview-pane {
-    width: 100%;
     min-height: 300px;
 }
 .bccvl-preview-pane .empty {
@@ -65,16 +64,55 @@ body {
     font-size: 600%;
     opacity: 0.1;
     line-height: 300px;
-    color: #666;
-    text-shadow: 0 2px 0 white, 0 -2px 0 black;
+    color: rgba(100,100,100, 0.5);
+    text-shadow: 0 2px 0 white, 0 -0.005em 0 rgba(0,0,0, 0.5);
 }
 
 /* experiment form ------------------------------------------------------- */
 
 input.bccvl-expname {
     font-size: 28px; /* double normal, fix in Less */
-    line-height: 44px;
-    height: 44px;
+    line-height: 50px;
+    height: 50px;
+}
+
+textarea.bccvl-expdesc {
+    margin-top: 1em;
+}
+
+/* ---
+this doesn't work because Twitter Bootstrap doesn't properly
+set the styles on the toggle link (if you click it, it gets the
+collapse class applied, but if you click a different one, it
+gets collapsed but doesn't get the .collapsed style applied.)
+
+Update: this bug is fixed in Bootstrap 3.0, so for now let's
+show the disclosure triangles, file a bug that they're wrong
+sometimes, and upgrade when bootstrap 3 is out.
+--- */
+.bccvl-algoconfig .accordion-toggle:before {
+    content: '\25bc';
+    color: #ccc;
+    float: left;
+    width: 1.5em;
+}
+
+.bccvl-algoconfig .accordion-toggle.collapsed:before {
+    content: '\25b6';
+}
+
+.bccvl-expstatus {
+    /*font-size: 150%;*/
+    text-align: center;
+    padding: 2em 0;
+}
+.bccvl-expstatus p {
+    margin-bottom: 0.66em;
+}
+.bccvl-expstatus button {
+    margin-top: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 /* tables ---------------------------------------------------------------- */
