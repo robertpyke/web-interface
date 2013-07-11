@@ -114,6 +114,19 @@ sometimes, and upgrade when bootstrap 3 is out.
     padding-left: 2em;
     padding-right: 2em;
 }
+.bccvl-expstatus .close {
+    right: 13px;
+    top: -20px;
+}
+
+/* the experiment-is-finished alert box should be smaller.. */
+.bccvl-expstatus.alert-success {
+    padding: 0.5em;
+}
+.bccvl-expstatus.alert-success p {
+    margin-bottom: 0;
+}
+
 
 /* tables ---------------------------------------------------------------- */
 

@@ -404,6 +404,7 @@
 					<div class="row-fluid">
 						<!-- show the current status -->
 						<div class="span12 bccvl-expstatus alert alert-block alert-info">
+							<a href="#" class="close" data-dismiss="alert">&times;</a><!-- this is temporary to demo all the status alert boxes. -->
 							<p class="lead">this Experiment has <strong>not been started</strong>.</p>
 							<button class="btn btn-primary btn-large">start Experiment</button>
 						</div>
@@ -412,6 +413,7 @@
 					<div class="row-fluid">
 						<!-- show the current status -->
 						<div class="span12 bccvl-expstatus alert alert-block">
+							<a href="#" class="close" data-dismiss="alert">&times;</a><!-- this is temporary to demo all the status alert boxes. -->
 							<p class="lead">this Experiment is <strong>running</strong>.</p>
 							<button class="btn btn-warning">abandon Experiment</button>
 						</div>
@@ -420,9 +422,10 @@
 					<div class="row-fluid">
 						<!-- show the current status -->
 						<div class="span12 bccvl-expstatus alert alert-block alert-error">
+							<a href="#" class="close" data-dismiss="alert">&times;</a><!-- this is temporary to demo all the status alert boxes. -->
 							<p class="lead">this Experiment stopped with an <strong>error</strong>.</p>
 							<p>
-								See details in the results section below.  If the error is unlikely to recur,
+								See the error details in the results section below.  If the error is unlikely to recur,
 								you can re-attempt the experiment.
 							</p>
 							<button class="btn btn-danger">start Experiment again</button>
@@ -431,14 +434,19 @@
 
 					<div class="row-fluid">
 						<!-- show the current status -->
-						<div class="span12 bccvl-expstatus alert alert-block alert-success">
-							<p class="lead">this Experiment is <strong>complete</strong>.</p>
-							<p>The results are available below.</p>
-							<div class="btn-group">
-								<button class="btn btn-success">discard these results and reconfigure Experiment</button>
-								<button class="btn btn-success">configure a new Experiment like this one</button>
-							</div>
+						<div class="span12 bccvl-expstatus alert alert-success">
+							<a href="#" class="close" data-dismiss="alert">&times;</a><!-- this is temporary to demo all the status alert boxes. -->
+							<p>
+								this Experiment is <strong>complete</strong>. The results are available below.
+							</p>
 						</div>
+					</div>
+
+					<!-- dunno where to put these, leave them here for now -->
+					<div class="btn-group">
+						<button class="btn">delete this Experiment</button>
+						<button class="btn">discard these results</button>
+						<button class="btn">copy this Experiment</button>
 					</div>
 
 					<div class="row-fluid">
