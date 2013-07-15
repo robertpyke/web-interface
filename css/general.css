@@ -68,6 +68,29 @@ body {
     text-shadow: 0 2px 0 white, 0 -0.005em 0 rgba(0,0,0, 0.5);
 }
 
+
+/* experiment form ------------------------------------------------------- */
+
+.bccvl-wizardtabs {
+    position: relative;
+}
+.bccvl-wizardtabs-navbtns {
+    position: absolute;
+    height: 0;
+    left: 0;
+    right: 0;
+}
+.bccvl-wizardtabs-navbtns button {
+    width: 10em;
+}
+.bccvl-wizardtabs-navbtns button.bccvl-wizardtabs-prev { float: left;  }
+.bccvl-wizardtabs-navbtns button.bccvl-wizardtabs-next { float: right; }
+
+.bccvl-wizardtabs ul.nav {
+    padding-left: 11em;
+    padding-right: 11em;
+}
+
 /* experiment form ------------------------------------------------------- */
 
 input.bccvl-expname {

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +82,7 @@
 
 
 <!-- experiment header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-		<!-- hmm actually not sure if we really need the tabs -->
+		<!-- hmm actually not sure if we really need the tabs on the mockups -->
 
 
 <!-- experiment setup form ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -91,15 +90,24 @@
 		<section class="bccvl-experimentdetails tabbable">
 		<form>
 
-			<!-- tabs -->
-			<ul class="nav nav-tabs">
-				<li class="active"><a href="#tab-occur" data-toggle="tab">Occurrences</a></li>
-				<li><a href="#tab-enviro" data-toggle="tab">Environment</a></li>
-				<li><a href="#tab-climate" data-toggle="tab">Climate</a></li>
-				<li><a href="#tab-config" data-toggle="tab">Configuration</a></li>
-				<li><a href="#tab-results" data-toggle="tab">Status</a></li>
-			</ul>
+			<!-- the experiment form wizard tabs with the prev/next buttons -->
 
+			<!-- tabs -->
+			<div class="bccvl-wizardtabs">
+				<div class="bccvl-wizardtabs-navbtns">
+					<button class="btn bccvl-wizardtabs-prev"><i class="icon-chevron-left"></i>previous</button>
+					<button class="btn bccvl-wizardtabs-next">next<i class="icon-chevron-right"></i></button>
+				</div>
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#tab-occur" data-toggle="tab">Occurrences</a></li>
+					<li><a href="#tab-enviro" data-toggle="tab">Environment</a></li>
+					<li><a href="#tab-climate" data-toggle="tab">Climate</a></li>
+					<li><a href="#tab-config" data-toggle="tab">Configuration</a></li>
+					<li><a href="#tab-results" data-toggle="tab">Status</a></li>
+				</ul>
+			</div>
+
+			<!-- the contents of the wizard tab panes -->
 			<div class="tab-content">
 
 				<!-- page: species occurrences ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ -->
@@ -528,8 +536,11 @@
 <!-- javascript ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<script src="/lib/jquery/jquery-2.0.3.js"></script>
 	<script src="/lib/bootstrap/js/bootstrap.js"></script>
+	<script src="/js/bccvl-wizard-tabs.js"></script>
 	<script>
-		$( function(){ /* stuff here */ } )
+		$(function(){
+			makeBCCVLWizardButtons();
+		});
 	</script>
 
 </body>
