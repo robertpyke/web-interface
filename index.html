@@ -90,7 +90,7 @@
 		<section class="bccvl-experimentdetails tabbable">
 		<form>
 
-			<!-- the experiment form wizard tabs with the prev/next buttons -->
+			<!-- the experiment form wizardy tabs, with the prev/next buttons -->
 
 			<!-- tabs -->
 			<div class="bccvl-wizardtabs">
@@ -448,18 +448,33 @@
 								this Experiment is <strong>complete</strong>. The results are available below.
 							</p>
 						</div>
-					</div>
 
-					<!-- dunno where to put these, leave them here for now -->
-					<div class="btn-group">
-						<button class="btn">delete this Experiment</button>
-						<button class="btn">discard these results</button>
-						<button class="btn">copy this Experiment</button>
+						<div class="row-fluid bccvl-buttonbar">
+							<!-- dunno where to put these, leave them here for now -->
+							<div class="span3">
+								<div class="btn-group btn-block">
+									<a class="btn dropdown-toggle btn-block btn-danger" data-toggle="dropdown" href="#">
+										<strong>delete</strong> this Experiment
+									</a>
+									<ul class="dropdown-menu">
+										<li class="bccvl-dropdownlabel disabled">really delete this Experiment and its results forever?</li>
+										<li><a class="text-error"><i class="icon-remove"></i> yes, delete it</a></li>
+										<li><a class=""><i class="icon-arrow-left"></i> no, on second thoughts leave it</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="span3"><button class="btn btn-block"><strong>discard</strong> these results</button></div>
+							<div class="span3"><button class="btn btn-block"><strong>download</strong> these results</button></div>
+							<div class="span3"><button class="btn btn-block"><strong>copy</strong> this Experiment</button></div>
+						</div>
+
+
 					</div>
 
 					<div class="row-fluid">
 						<!-- list of (potential) results -->
 						<div class="span4">
+
 							<table class="table table-hover">
 								<thead>
 									<tr><th colspan="3">
@@ -539,7 +554,19 @@
 	<script src="/js/bccvl-wizard-tabs.js"></script>
 	<script>
 		$(function(){
+			// hook up the wizard buttons
 			makeBCCVLWizardButtons();
+
+			// randomly hide all but 1 of the statuses
+			// TODO: this goes away when integrated with actual experiments
+			var $statuses = $('.bccvl-expstatus').parent();
+			var $luckystatus = $statuses[ Math.floor(Math.random() * $statuses.length) ];
+			$.each( $statuses, function(index, status) {
+				var $status = $(status);
+				if (! $status.is($luckystatus)) {
+					$status.remove();
+				}
+			});
 		});
 	</script>
 

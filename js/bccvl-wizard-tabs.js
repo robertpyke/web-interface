@@ -5,7 +5,8 @@
 // idea is that the tabs are different pages in a 'wizard'
 // style interface).
 //
-// TODO: This should probably be a jQuery/Bootstrap plugin.
+// TODO: This should probably be some kind of jQuery or
+// Bootstrap plugin..
 
 window.makeBCCVLWizardButtons = function() {
 
@@ -35,7 +36,7 @@ window.makeBCCVLWizardButtons = function() {
             $nextButtons.prop('disabled', $currentTab.is($lastTab));
         })
 
-        // invoke the disable code right now..
+        // invoke the disable-button code right now..
         $tabs.find('a[data-toggle="tab"]').trigger('shown');
 
         // hook up the prev buttons

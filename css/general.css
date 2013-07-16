@@ -53,6 +53,13 @@ body {
 }
 
 
+/* button bar ------------------------------------------------------------ */
+
+.bccvl-buttonbar {
+    padding-bottom: 1em;
+}
+
+
 /* preview window -------------------------------------------------------- */
 
 .bccvl-preview-pane {
@@ -69,7 +76,7 @@ body {
 }
 
 
-/* experiment form ------------------------------------------------------- */
+/* wizard+tabs interface ------------------------------------------------- */
 
 .bccvl-wizardtabs {
     position: relative;
@@ -150,6 +157,10 @@ sometimes, and upgrade when bootstrap 3 is out.
     margin-bottom: 0;
 }
 
+.bccvl-dropdownlabel {
+    padding: 0.5em;
+    color: #999;
+}
 
 /* tables ---------------------------------------------------------------- */
 
